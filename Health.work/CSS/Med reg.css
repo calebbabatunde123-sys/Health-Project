@@ -1,0 +1,189 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Background */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0284c7, #0ea5a4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container */
+.main-container {
+  width: 100%;
+  padding: 20px;
+}
+
+/* Card */
+.auth-container {
+  max-width: 480px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.6s ease;
+}
+
+/* Header */
+.form-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-header h2 {
+  color: #0284c7;
+}
+
+.form-header p {
+  color: #555;
+}
+
+/* Progress Bar */
+.progress-bar {
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 40%;
+  background: linear-gradient(90deg, #0ea5a4, #22c55e);
+  transition: width 0.4s ease;
+}
+
+/* Floating Input */
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 14px 40px 14px 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #f9fafb;
+  outline: none;
+}
+
+/* Floating Label */
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  font-size: 13px;
+  color: #777;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.form-group input:focus + label,
+.form-group input:valid + label {
+  top: 8px;
+  font-size: 11px;
+  color: #0284c7;
+}
+
+/* Icons */
+.input-icon i {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #0284c7;
+}
+
+/* Radio */
+.radio-group {
+  display: flex;
+  gap: 20px;
+}
+
+.radio-group input {
+  accent-color: #0ea5a4;
+}
+
+/* Button */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #0ea5a4, #0284c7);
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(2, 132, 199, 0.3);
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(2, 6, 23, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-content {
+  width: 90%;
+  max-width: 360px;
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  text-align: center;
+  animation: zoomIn 0.4s ease;
+}
+
+/* Success Icon */
+.success-icon {
+  font-size: 45px;
+  color: #22c55e;
+}
+
+/* Buttons */
+.modal-btn.primary {
+  background: #0ea5a4;
+  color: #fff;
+}
+
+.modal-btn.secondary {
+  background: #eee;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
